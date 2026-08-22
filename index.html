@@ -77,12 +77,12 @@ body{width:100%;margin:0;overflow-x:hidden;background:radial-gradient(circle at 
 .backRow{display:flex;flex-direction:column;gap:7px;width:100%;margin-top:12px}
 .backRow .btn{margin:0;justify-content:center;text-align:center}
 @media(max-width:360px){
-  .wrap{padding-left:10px;padding-right:10px}
-  .hero h1{font-size:27px}
-  .question h2{font-size:18px}
-  .btn{font-size:11px;padding:10px}
-  .judgment h2{font-size:25px}
-  .bookTitle{font-size:22px}
+  .wrap{padding-left:10px;padding-right:10px}
+  .hero h1{font-size:27px}
+  .question h2{font-size:18px}
+  .btn{font-size:11px;padding:10px}
+  .judgment h2{font-size:25px}
+  .bookTitle{font-size:22px}
 }
 </style>
 </head>
@@ -92,7 +92,7 @@ body{width:100%;margin:0;overflow-x:hidden;background:radial-gradient(circle at 
 <header class="top"><span>Tribunal de Assuntos Manifestamente Importantes</span><span id="procTop">Processo n.º P-2026/0822-0731</span></header>
 
 <section id="intro" class="screen active"><div class="hero"><div><p class="tag">Despacho de abertura · Confidencial</p><h1>PROCESSO<br><em>DE AVERIGUAÇÃO</em><br>EXTRAORDINÁRIA</h1><p class="intro">Foram identificados indícios suficientes para justificar a abertura do presente processo. São necessárias dez declarações espontâneas. Responde por instinto. Fundamentação excessiva poderá ser valorada contra ti.</p><button class="btn primary" onclick="startQuiz()">Prestar declarações →</button></div><div class="file"><div style="font:12px monospace">REF. P-2026/0822-0731</div><div class="small" style="color:#6f3838;margin-top:70px">Objeto do processo</div><h2>Apuramento de factos e circunstâncias suspeitamente específicos.</h2><div class="meta"><span>Estado</span><b>INSTRUÇÃO</b><span>Classificação</span><b>RESERVADO</b><span>Diligências</span><b>10</b></div></div></div></section>
-<section id="quiz" class="screen"><div class="question"><div class="qhead"><div><span id="eyebrow"></span><br><span id="sheet"></span></div><div>FASE: INSTRUÇÃO<br><span id="conviction"></span></div></div><h2 id="question"></h2><div id="answers" class="answers"></div></div></section>
+<section id="quiz" class="screen"><div class="question"><button id="backButton" class="btn secondary" onclick="previousQuestion()" style="display:none;margin:0 0 12px">← Voltar à pergunta anterior</button><div class="qhead"><div><span id="eyebrow"></span><br><span id="sheet"></span></div><div>FASE: INSTRUÇÃO<br><span id="conviction"></span></div></div><h2 id="question"></h2><div id="answers" class="answers"></div></div></section>
 <section id="decision" class="screen"><div class="decision"><div class="seal">§</div><p class="small">Autos conclusos</p><h2 style="font-size:44px">A elaborar decisão final.</h2><div class="log">✓ declarações juntas aos autos<br>✓ matéria de facto consolidada<br>✓ indícios cruzados entre diligências<br>✓ perfil comportamental apurado<br>› a selecionar determinação complementar…</div></div></section>
 <section id="result" class="screen"><div class="result"><div class="judgment"><div class="closed">PROCESSO ENCERRADO</div><div class="small" style="color:#7e2632">Decisão final</div><h2 id="profileTitle"></h2><p id="profileText" style="font-size:18px;line-height:1.55"></p><div class="bars" id="bars"></div></div><div class="book"><div><p class="small">Anexo I · Determinação complementar</p><h3>O Tribunal deliberou ainda sobre matéria não submetida a julgamento.</h3></div><div><p class="small">Objeto determinado</p><div id="bookTitle" class="bookTitle"></div><p id="bookAuthor" style="color:#d8baa4a8;font-family:Arial"></p><p style="font-size:18px;color:#ecd4c4c4;margin-top:28px">A determinação é definitiva e não admite recurso.</p><p style="font-size:21px;font-weight:bold">Escusas de o comprar. Já existe um exemplar à tua espera.</p><div class="alreadyRead"><p>Já leste este livro? Acontece até aos melhores Tribunais. Podes requerer a reapreciação da determinação e consultar os restantes perfis.</p><button class="btn" onclick="openProfiles()">Já li este livro · requerer reapreciação →</button></div></div></div></div></section>
 
