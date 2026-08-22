@@ -12,51 +12,63 @@
   body{background:radial-gradient(circle at 50% 0%,#60252b55,transparent 34%),var(--bg)}
   .wrap{width:100%;max-width:100%;padding:16px 14px 32px;overflow-x:hidden}
   .top{font-size:7px;letter-spacing:.06em;gap:8px;align-items:flex-start;line-height:1.35;width:100%}
-  .top span{min-width:0;overflow-wrap:anywhere;word-break:normal}
+  .top span{min-width:0;overflow-wrap:anywhere}
   .top span:first-child{max-width:52%}
   .top span:last-child{max-width:48%;text-align:right;white-space:normal}
-  .screen{min-height:calc(100svh - 74px);width:100%;max-width:100%;padding:20px 0;align-items:center;overflow:hidden}
-  .hero,.result,.profileDetailBox{grid-template-columns:minmax(0,1fr);gap:20px;width:100%;max-width:100%;min-width:0}
-  .hero{display:block}
+  .screen{min-height:calc(100svh - 74px);width:100%;max-width:100%;padding:18px 0;align-items:flex-start;overflow:hidden}
+
+
+  /* Página inicial: texto primeiro e dossier por baixo */
+  .hero{display:flex;flex-direction:column;width:100%;max-width:100%;gap:30px;align-items:stretch}
   .hero>div:first-child{width:100%;min-width:0}
-  .hero h1{font-size:clamp(35px,10.8vw,48px);line-height:.94;letter-spacing:-.04em;overflow-wrap:anywhere;word-break:normal;max-width:100%}
-  .tag,.eyebrow,.small{font-size:8.5px;letter-spacing:.13em;overflow-wrap:anywhere}
-  .intro{font-size:15px;line-height:1.5;max-width:100%;overflow-wrap:break-word}
-  .file{display:none}
-  .primary{width:100%;text-align:center;margin-top:20px;padding:15px 13px}
+  .hero h1{font-size:clamp(29px,8.4vw,38px);line-height:.98;letter-spacing:-.035em;margin:13px 0 18px;overflow-wrap:normal;word-break:normal}
+  .tag,.eyebrow,.small{font-size:8px;letter-spacing:.12em;overflow-wrap:anywhere}
+  .intro{font-size:14px;line-height:1.5;max-width:100%;overflow-wrap:break-word}
+  .primary{width:100%;text-align:center;margin-top:19px;padding:14px 12px}
+
+
+  /* Mantém o dossier visível no telemóvel e coloca-o sob o texto */
+  .file{display:block;order:2;width:calc(100% - 8px);max-width:100%;min-height:315px;margin:5px auto 0;padding:23px 20px;transform:rotate(.5deg);box-shadow:0 18px 45px #0008}
+  .file:after{right:16px;top:-13px;border-width:3px;padding:5px 8px;font-size:12px}
+  .file h2{font-size:25px;line-height:1.08;margin-top:58px;overflow-wrap:break-word}
+  .file .small{font-size:8px!important;margin-top:48px!important}
+  .file .meta{margin-top:42px;gap:10px;font-size:8px;letter-spacing:.08em}
+
+
+  /* Perguntas mais compactas */
   .question{width:100%;max-width:100%;min-width:0;margin:0;overflow:hidden}
-  .qhead{display:grid;grid-template-columns:minmax(0,1fr) auto;font-size:8px;letter-spacing:.02em;gap:8px;line-height:1.4;margin-bottom:22px;width:100%;padding-bottom:10px}
+  .qhead{display:grid;grid-template-columns:minmax(0,1fr) auto;font-size:7.5px;letter-spacing:.01em;gap:7px;line-height:1.35;margin-bottom:18px;width:100%;padding-bottom:9px}
   .qhead>div{min-width:0;overflow-wrap:anywhere}
-  .qhead>div:first-child{max-width:none}
-  .qhead>div:last-child{text-align:right;white-space:normal;max-width:106px}
-  .question h2{font-size:clamp(27px,7.8vw,35px);line-height:1.08;margin-bottom:11px;max-width:100%;overflow-wrap:break-word;word-break:normal;hyphens:auto}
-  .answers{gap:8px;width:100%;max-width:100%;min-width:0}
-  .btn{display:block;width:100%;max-width:100%;min-width:0;padding:14px 12px;font-size:13.5px;line-height:1.35;white-space:normal;overflow-wrap:break-word;word-break:normal;hyphens:auto}
-  .answerNo{display:inline-block;width:28px;vertical-align:top;flex:none}
+  .qhead>div:last-child{text-align:right;white-space:normal;max-width:100px}
+  .question h2{font-size:clamp(23px,6.7vw,29px);line-height:1.1;margin:0 0 16px;max-width:100%;overflow-wrap:break-word;hyphens:auto}
+  .answers{gap:7px;width:100%;max-width:100%;min-width:0}
+  .btn{display:block;width:100%;max-width:100%;min-width:0;padding:13px 11px;font-size:13px;line-height:1.35;white-space:normal;overflow-wrap:break-word;hyphens:auto}
+  .answerNo{display:inline-block;width:27px;vertical-align:top}
+
+
   .decision{width:100%;max-width:100%;padding:0 2px;overflow:hidden}
-  .decision h2{font-size:32px!important;line-height:1.08;overflow-wrap:break-word}
-  .seal{width:110px;height:110px;font-size:39px}
+  .decision h2{font-size:30px!important;line-height:1.08;overflow-wrap:break-word}
+  .seal{width:105px;height:105px;font-size:38px}
   .log{width:100%;max-width:100%;font-size:9.5px;padding:13px;line-height:1.7;white-space:normal;overflow-wrap:anywhere}
-  .result{display:grid;min-width:0;overflow:hidden}
-  .judgment,.book,.profileDetailPaper,.profileDetailBook{width:100%;max-width:100%;min-width:0;padding:23px 18px;overflow:hidden}
-  .closed{position:static;display:inline-block;max-width:100%;margin-bottom:22px;font-size:8.5px;transform:rotate(-2deg);white-space:normal}
-  .judgment h2{font-size:clamp(34px,9.7vw,44px);line-height:1;margin:10px 0 15px;max-width:100%;overflow-wrap:break-word;hyphens:auto}
-  #profileText,#altProfileText{font-size:16px!important;line-height:1.5!important;overflow-wrap:break-word}
-  .book h3{font-size:26px;line-height:1.08;overflow-wrap:break-word}
-  .bookTitle{font-size:28px;line-height:1.08;max-width:100%;overflow-wrap:break-word;hyphens:auto}
+  .result,.profileDetailBox{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;width:100%;max-width:100%;min-width:0;overflow:hidden}
+  .judgment,.book,.profileDetailPaper,.profileDetailBook{width:100%;max-width:100%;min-width:0;padding:22px 18px;overflow:hidden}
+  .closed{position:static;display:inline-block;max-width:100%;margin-bottom:20px;font-size:8.5px;transform:rotate(-2deg);white-space:normal}
+  .judgment h2{font-size:clamp(31px,8.7vw,39px);line-height:1;margin:10px 0 15px;overflow-wrap:break-word}
+  #profileText,#altProfileText{font-size:15px!important;line-height:1.5!important;overflow-wrap:break-word}
+  .book h3{font-size:25px;line-height:1.08;overflow-wrap:break-word}
+  .bookTitle{font-size:27px;line-height:1.08;overflow-wrap:break-word}
   .book p{max-width:100%;overflow-wrap:break-word}
-  .alreadyRead{margin-top:25px;padding-top:18px}
+  .alreadyRead{margin-top:24px;padding-top:18px}
   .alreadyRead p{font-size:11.5px;line-height:1.5}
   .profilesPanel,.profileDetail{width:100%;max-width:100%;min-width:0;overflow:hidden}
-  .profilesPanel h2{font-size:clamp(32px,9vw,41px);line-height:1.03;max-width:100%;overflow-wrap:break-word;hyphens:auto}
-  .profileIntro{font-size:15px;line-height:1.5;max-width:100%;overflow-wrap:break-word}
-  .profileGrid{grid-template-columns:minmax(0,1fr);gap:8px;margin-top:22px;width:100%}
-  .profileCard{min-height:auto;padding:15px 13px}
-  .profileCard strong{font-size:13.5px;overflow-wrap:break-word}
-  .profileCard span{font-size:11.5px;line-height:1.4;overflow-wrap:break-word}
-  .profileDetailBox{display:grid}
-  .profileDetailPaper h2{font-size:34px;line-height:1;max-width:100%;overflow-wrap:break-word;hyphens:auto}
-  .profileDetailBook h3{font-size:28px;line-height:1.05;max-width:100%;overflow-wrap:break-word;hyphens:auto}
+  .profilesPanel h2{font-size:clamp(30px,8.5vw,38px);line-height:1.04;overflow-wrap:break-word}
+  .profileIntro{font-size:14px;line-height:1.5;max-width:100%}
+  .profileGrid{grid-template-columns:minmax(0,1fr);gap:8px;margin-top:20px;width:100%}
+  .profileCard{min-height:auto;padding:14px 12px}
+  .profileCard strong{font-size:13px}
+  .profileCard span{font-size:11.5px;line-height:1.4}
+  .profileDetailPaper h2{font-size:31px;line-height:1}
+  .profileDetailBook h3{font-size:27px;line-height:1.05}
   .backRow{display:grid;grid-template-columns:minmax(0,1fr);width:100%;gap:8px}
   .backRow .btn{margin-top:0;text-align:center}
   .metric{font-size:7.5px;letter-spacing:.05em;overflow-wrap:anywhere}
@@ -64,10 +76,12 @@
 
 @media(max-width:380px){
   .wrap{padding-left:10px;padding-right:10px}
-  .hero h1{font-size:34px}
-  .question h2{font-size:26px}
+  .hero h1{font-size:28px}
+  .question h2{font-size:22px}
   .top{font-size:6px}
-  .btn{font-size:13px;padding:13px 10px}
+  .btn{font-size:12.5px;padding:12px 10px}
+  .file{width:calc(100% - 4px);padding:21px 17px;min-height:300px}
+  .file h2{font-size:22px}
   .judgment,.book,.profileDetailPaper,.profileDetailBook{padding-left:15px;padding-right:15px}
 }
 </style>
