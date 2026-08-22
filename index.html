@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missão: Descobrir o Presente Perfeito</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+p {
+    color: #555;
+}
+
+.question {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 30px;
+    background: #0078D4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #005ea8;
+}
+
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #eef6ff;
+    border-radius: 6px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Missão: Descobrir o Presente Perfeito</h1>
+
+<p>
+Ajuda-me a descobrir qual poderá ser o presente ideal para ti. Não suspeites de nada...
+</p>
+
+<div class="question">
+<label>Qual é o teu hobby favorito?</label>
+<input type="text" id="hobby" style="width:100%;padding:8px;">
+</div>
+
+<div class="question">
+<label>O que preferes receber?</label>
+<select id="tipo" style="width:100%;padding:8px;">
+<option>Experiência</option>
+<option>Objeto</option>
+<option>Tecnologia</option>
+<option>Moda</option>
+<option>Livros</option>
+</select>
+</div>
+
+<div class="question">
+<label>Destino de sonho?</label>
+<input type="text" id="destino" style="width:100%;padding:8px;">
+</div>
+
+<div class="question">
+<label>Café ou Chá?</label>
+<select id="bebida" style="width:100%;padding:8px;">
+<option>Café</option>
+<option>Chá</option>
+</select>
+</div>
+
+<div class="question">
+<label>Se tivesses 100€, gastavas em quê?</label>
+<input type="text" id="euros" style="width:100%;padding:8px;">
+</div>
+
+<button onclick="mostrarResumo()">
+Concluir
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+function mostrarResumo() {
+
+const hobby = document.getElementById("hobby").value;
+const tipo = document.getElementById("tipo").value;
+const destino = document.getElementById("destino").value;
+const bebida = document.getElementById("bebida").value;
+const euros = document.getElementById("euros").value;
+
+document.getElementById("result").style.display = "block";
+
+document.getElementById("result").innerHTML =
+"<h2>Respostas registadas</h2>" +
+"<p><strong>Hobby:</strong> " + hobby + "</p>" +
+"<p><strong>Tipo de presente:</strong> " + tipo + "</p>" +
+"<p><strong>Destino:</strong> " + destino + "</p>" +
+"<p><strong>Bebida:</strong> " + bebida + "</p>" +
+"<p><strong>Gastaria 100€ em:</strong> " + euros + "</p>" +
+"<p><em>Agora tira um screenshot e envia-me!</em></p>";
+}
+</script>
+
+</body>
+</html>
