@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="pt-PT">
 <head>
@@ -9,80 +7,72 @@
 <style>
 :root{--bg:#160d0d;--panel:#2d1715;--wine:#872b39;--wine2:#a33d4b;--paper:#d9c0a5;--ink:#351d18;--cream:#f2dfcf;--muted:#c4a58d}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 12%,#60252b66,transparent 32%),radial-gradient(circle at 85% 82%,#6c432d55,transparent 27%),var(--bg);color:var(--cream);font-family:Georgia,serif;min-height:100vh}.wrap{max-width:980px;margin:auto;padding:26px 22px 50px}.top{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #cba98c33;padding-bottom:14px;font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d8bba56e}.screen{display:none;min-height:77vh;align-items:center}.screen.active{display:flex}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;width:100%}.tag,.eyebrow{font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#c26972}.hero h1{font-size:67px;line-height:.91;letter-spacing:-.045em;margin:16px 0}.hero h1 em{font-style:normal;color:#a13a48}.intro{font-size:18px;line-height:1.6;color:#e2cbb9b8}.file{position:relative;background:var(--paper);color:var(--ink);padding:32px;box-shadow:0 28px 70px #0009;transform:rotate(1deg);min-height:420px;border:1px solid #ead6c0}.file:after{content:'CONFIDENCIAL';position:absolute;right:28px;top:-17px;border:4px solid #7c2734aa;color:#7c2734bb;padding:7px 12px;font:bold 17px Arial;transform:rotate(-5deg);letter-spacing:.08em}.file h2{font-size:34px;margin-top:85px}.meta{margin-top:65px;display:grid;grid-template-columns:1fr 1fr;gap:13px;font:10px Arial;letter-spacing:.13em;text-transform:uppercase}.btn{border:1px solid #d2ad9228;background:#40231e77;color:#f4e6d8;padding:17px 19px;text-align:left;font:15px Arial,sans-serif;cursor:pointer;transition:.18s;width:100%}.btn:hover{background:var(--wine);border-color:#b95b67}.primary{width:auto;background:var(--wine);border:none;margin-top:25px;padding:16px 23px;font-weight:bold}.primary:hover{background:var(--wine2)}.secondary{width:auto;margin-top:13px;color:#d9baa3aa;background:transparent;border-color:#cba98c30}.question{width:100%;max-width:820px;margin:auto}.qhead{display:flex;justify-content:space-between;border-bottom:1px solid #cba98c26;padding-bottom:13px;margin-bottom:30px;font:11px Arial;color:#c9aa925a}.question h2{font-size:42px;line-height:1.08;margin:0 0 28px}.answers{display:grid;gap:11px}.answerNo{display:inline-block;width:36px;color:#cba98c66;font:11px monospace}.progress{position:fixed;left:0;top:0;height:3px;background:var(--wine2);transition:.35s}.decision{text-align:center;margin:auto;max-width:600px}.seal{width:150px;height:150px;border:2px solid var(--wine2);border-radius:50%;margin:0 auto 30px;display:flex;align-items:center;justify-content:center;color:#c75e69;font:52px Georgia;animation:pulse 1.2s infinite alternate}@keyframes pulse{to{box-shadow:0 0 35px #8f263555}}.log{margin-top:30px;text-align:left;background:#321a1877;border:1px solid #c9a58b22;padding:18px;font:12px monospace;color:#d9bca177;line-height:1.8}.result{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:25px}.judgment{background:var(--paper);color:var(--ink);padding:34px;position:relative;box-shadow:0 20px 65px #0008}.closed{position:absolute;right:24px;top:26px;border:3px solid #7e2632aa;color:#7e2632bb;padding:7px 10px;font:bold 12px Arial;transform:rotate(7deg)}.judgment h2{font-size:45px;line-height:.95;margin:52px 0 16px}.book{background:#321a18cc;border:1px solid #c9a58b26;padding:34px;display:flex;flex-direction:column;justify-content:space-between}.book h3{font-size:34px;margin:15px 0}.bookTitle{font-size:34px;font-weight:bold;margin-top:30px}.small{font:10px Arial;letter-spacing:.21em;text-transform:uppercase;color:#b95a65}.bars{margin-top:27px}.metric{margin:13px 0;font:9px Arial;text-transform:uppercase;letter-spacing:.1em}.bar{height:4px;background:#43261f22;margin-top:5px}.fill{height:100%;background:#7e2632}.alreadyRead{margin-top:34px;padding-top:24px;border-top:1px solid #c9a58b26}.alreadyRead p{font:13px Arial,sans-serif;line-height:1.55;color:#d9baa3aa}.profilesPanel{width:100%;max-width:900px;margin:auto}.profilesPanel h2{font-size:48px;margin:8px 0 12px}.profileIntro{font-size:18px;line-height:1.55;color:#e2cbb9b8;max-width:720px}.profileGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}.profileCard{min-height:125px}.profileCard strong{display:block;font:700 15px Arial,sans-serif;color:#f4e6d8;margin-bottom:8px}.profileCard span{font:13px Arial,sans-serif;color:#c9aa9290;line-height:1.4}.profileDetail{width:100%;max-width:800px;margin:auto}.profileDetailBox{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.profileDetailPaper{background:var(--paper);color:var(--ink);padding:35px;box-shadow:0 20px 65px #0008}.profileDetailPaper h2{font-size:45px;line-height:.95;margin:22px 0 17px}.profileDetailBook{background:#321a18cc;border:1px solid #c9a58b26;padding:35px;display:flex;flex-direction:column;justify-content:center}.profileDetailBook h3{font-size:38px;margin:14px 0 5px}.backRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.hidden{display:none}@media(max-width:760px){
   html,body{width:100%;max-width:100%;overflow-x:hidden}
-  body{background:radial-gradient(circle at 50% 0%,#60252b55,transparent 34%),var(--bg)}
-  .wrap{width:100%;max-width:100%;padding:16px 14px 32px;overflow-x:hidden}
-  .top{font-size:7px;letter-spacing:.06em;gap:8px;align-items:flex-start;line-height:1.35;width:100%}
+  body{background:radial-gradient(circle at 50% 0%,#60252b44,transparent 30%),var(--bg)}
+  .wrap{width:100%;max-width:100%;padding:12px 16px 26px;overflow-x:hidden}
+  .top{font-size:6.5px;letter-spacing:.04em;line-height:1.3;gap:8px;padding-bottom:9px}
   .top span{min-width:0;overflow-wrap:anywhere}
-  .top span:first-child{max-width:52%}
-  .top span:last-child{max-width:48%;text-align:right;white-space:normal}
-  .screen{min-height:calc(100svh - 74px);width:100%;max-width:100%;padding:18px 0;align-items:flex-start;overflow:hidden}
-
-
-  /* Página inicial: texto primeiro e dossier por baixo */
-  .hero{display:flex;flex-direction:column;width:100%;max-width:100%;gap:30px;align-items:stretch}
-  .hero>div:first-child{width:100%;min-width:0}
-  .hero h1{font-size:clamp(29px,8.4vw,38px);line-height:.98;letter-spacing:-.035em;margin:13px 0 18px;overflow-wrap:normal;word-break:normal}
-  .tag,.eyebrow,.small{font-size:8px;letter-spacing:.12em;overflow-wrap:anywhere}
-  .intro{font-size:14px;line-height:1.5;max-width:100%;overflow-wrap:break-word}
-  .primary{width:100%;text-align:center;margin-top:19px;padding:14px 12px}
-
-
-  /* Mantém o dossier visível no telemóvel e coloca-o sob o texto */
-  .file{display:block;order:2;width:calc(100% - 8px);max-width:100%;min-height:315px;margin:5px auto 0;padding:23px 20px;transform:rotate(.5deg);box-shadow:0 18px 45px #0008}
-  .file:after{right:16px;top:-13px;border-width:3px;padding:5px 8px;font-size:12px}
-  .file h2{font-size:25px;line-height:1.08;margin-top:58px;overflow-wrap:break-word}
-  .file .small{font-size:8px!important;margin-top:48px!important}
-  .file .meta{margin-top:42px;gap:10px;font-size:8px;letter-spacing:.08em}
-
-
-  /* Perguntas mais compactas */
-  .question{width:100%;max-width:100%;min-width:0;margin:0;overflow:hidden}
-  .qhead{display:grid;grid-template-columns:minmax(0,1fr) auto;font-size:7.5px;letter-spacing:.01em;gap:7px;line-height:1.35;margin-bottom:18px;width:100%;padding-bottom:9px}
-  .qhead>div{min-width:0;overflow-wrap:anywhere}
-  .qhead>div:last-child{text-align:right;white-space:normal;max-width:100px}
-  .question h2{font-size:clamp(23px,6.7vw,29px);line-height:1.1;margin:0 0 16px;max-width:100%;overflow-wrap:break-word;hyphens:auto}
-  .answers{gap:7px;width:100%;max-width:100%;min-width:0}
-  .btn{display:block;width:100%;max-width:100%;min-width:0;padding:13px 11px;font-size:13px;line-height:1.35;white-space:normal;overflow-wrap:break-word;hyphens:auto}
-  .answerNo{display:inline-block;width:27px;vertical-align:top}
-
-
-  .decision{width:100%;max-width:100%;padding:0 2px;overflow:hidden}
-  .decision h2{font-size:30px!important;line-height:1.08;overflow-wrap:break-word}
-  .seal{width:105px;height:105px;font-size:38px}
-  .log{width:100%;max-width:100%;font-size:9.5px;padding:13px;line-height:1.7;white-space:normal;overflow-wrap:anywhere}
-  .result,.profileDetailBox{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;width:100%;max-width:100%;min-width:0;overflow:hidden}
-  .judgment,.book,.profileDetailPaper,.profileDetailBook{width:100%;max-width:100%;min-width:0;padding:22px 18px;overflow:hidden}
-  .closed{position:static;display:inline-block;max-width:100%;margin-bottom:20px;font-size:8.5px;transform:rotate(-2deg);white-space:normal}
-  .judgment h2{font-size:clamp(31px,8.7vw,39px);line-height:1;margin:10px 0 15px;overflow-wrap:break-word}
-  #profileText,#altProfileText{font-size:15px!important;line-height:1.5!important;overflow-wrap:break-word}
-  .book h3{font-size:25px;line-height:1.08;overflow-wrap:break-word}
-  .bookTitle{font-size:27px;line-height:1.08;overflow-wrap:break-word}
-  .book p{max-width:100%;overflow-wrap:break-word}
-  .alreadyRead{margin-top:24px;padding-top:18px}
-  .alreadyRead p{font-size:11.5px;line-height:1.5}
-  .profilesPanel,.profileDetail{width:100%;max-width:100%;min-width:0;overflow:hidden}
-  .profilesPanel h2{font-size:clamp(30px,8.5vw,38px);line-height:1.04;overflow-wrap:break-word}
-  .profileIntro{font-size:14px;line-height:1.5;max-width:100%}
-  .profileGrid{grid-template-columns:minmax(0,1fr);gap:8px;margin-top:20px;width:100%}
-  .profileCard{min-height:auto;padding:14px 12px}
-  .profileCard strong{font-size:13px}
-  .profileCard span{font-size:11.5px;line-height:1.4}
-  .profileDetailPaper h2{font-size:31px;line-height:1}
-  .profileDetailBook h3{font-size:27px;line-height:1.05}
-  .backRow{display:grid;grid-template-columns:minmax(0,1fr);width:100%;gap:8px}
-  .backRow .btn{margin-top:0;text-align:center}
-  .metric{font-size:7.5px;letter-spacing:.05em;overflow-wrap:anywhere}
+  .top span:first-child{max-width:54%}
+  .top span:last-child{max-width:46%;text-align:right}
+  .screen{min-height:calc(100svh - 52px);width:100%;max-width:100%;padding:14px 0;align-items:center;overflow:visible}
+  /* Capa mobile: simples, vertical e sem competir com o CTA */
+  .hero{display:flex;flex-direction:column;justify-content:center;gap:22px;width:100%;min-height:calc(100svh - 82px)}
+  .hero>div:first-child{width:100%}
+  .tag,.eyebrow,.small{font-size:7.5px;letter-spacing:.1em}
+  .hero h1{font-size:clamp(27px,7.5vw,34px);line-height:1.01;letter-spacing:-.025em;margin:11px 0 16px}
+  .intro{font-size:13.5px;line-height:1.5;margin:0;color:#e2cbb9b5}
+  .primary{width:100%;min-height:48px;margin-top:18px;padding:13px 14px;text-align:center;justify-content:center}
+  /* O dossier vira um resumo compacto, em vez de um segundo ecrã inteiro */
+  .file{display:block;width:100%;min-height:0;margin:0;padding:18px 17px;transform:none;box-shadow:0 14px 36px #0007}
+  .file:after{right:14px;top:-10px;border-width:2px;padding:4px 7px;font-size:9px}
+  .file>div:first-child{font-size:9px!important}
+  .file .small{margin-top:28px!important;font-size:7px!important}
+  .file h2{font-size:19px;line-height:1.1;margin:7px 0 0;max-width:88%}
+  .file .meta{margin-top:20px;gap:7px;font-size:7px;letter-spacing:.05em}
+  /* Pergunta como foco principal do ecrã */
+  .question{width:100%;max-width:100%;min-height:calc(100svh - 82px);display:flex;flex-direction:column;justify-content:center;margin:0;overflow:visible;padding:5px 0 12px}
+  .qhead{order:1;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;width:100%;margin:0 0 14px;padding-bottom:8px;font-size:7px;line-height:1.3;border-bottom:1px solid #cba98c20}
+  .qhead>div{min-width:0}
+  .qhead>div:last-child{max-width:86px;text-align:right}
+  .question h2{order:2;font-size:clamp(21px,5.9vw,26px);line-height:1.12;letter-spacing:-.01em;margin:0 0 18px;max-width:100%;font-weight:600}
+  .answers{order:3;display:flex;flex-direction:column;gap:8px;width:100%}
+  .btn{display:flex;align-items:center;width:100%;min-width:0;min-height:50px;padding:12px 13px;font-size:12.5px;line-height:1.32;white-space:normal;border-radius:4px}
+  .answerNo{width:28px;flex:0 0 28px;font-size:9px}
+  .answers .btn{background:#321a187c;border-color:#d2ad922d}
+  .answers .btn:active{background:var(--wine);transform:scale(.99)}
+  /* Resultado e decisão também mais compactos */
+  .decision{width:100%;max-width:100%;padding:10px 0}
+  .decision h2{font-size:25px!important;line-height:1.1;margin:12px 0 20px}
+  .seal{width:88px;height:88px;margin-bottom:20px;font-size:31px}
+  .log{width:100%;padding:12px;font-size:8.5px;line-height:1.65}
+  .result,.profileDetailBox{display:grid;grid-template-columns:1fr;gap:12px;width:100%}
+  .judgment,.book,.profileDetailPaper,.profileDetailBook{width:100%;padding:19px 16px;overflow:hidden}  .closed{position:static;display:inline-block;margin-bottom:14px;padding:5px 7px;font-size:7.5px;transform:rotate(-1deg)}  .judgment h2{font-size:30px;line-height:1.02;margin:8px 0 12px}
+  #profileText,#altProfileText{font-size:13.5px!important;line-height:1.45!important}
+  .bars{margin-top:18px}
+  .metric{margin:9px 0;font-size:7px;letter-spacing:.04em}
+  .book h3{font-size:21px;line-height:1.08;margin:10px 0}
+  .bookTitle{font-size:23px;line-height:1.08;margin-top:19px}
+  .book p{font-size:13.5px!important;line-height:1.45}
+  .alreadyRead{margin-top:20px;padding-top:15px}
+  .alreadyRead p{font-size:10.5px!important}
+  .profilesPanel,.profileDetail{width:100%;max-width:100%}  .profilesPanel h2{font-size:27px;line-height:1.07;margin:7px 0 10px}  .profileIntro{font-size:13px;line-height:1.45}
+  .profileGrid{grid-template-columns:1fr;gap:7px;margin-top:17px}
+  .profileCard{min-height:0;padding:12px}
+  .profileCard strong{font-size:12.5px;margin-bottom:5px}
+  .profileCard span{font-size:10.5px;line-height:1.35}
+  .profileDetailPaper h2{font-size:27px;line-height:1.02;margin:14px 0 11px}
+  .profileDetailBook h3{font-size:23px;line-height:1.05}
+  .backRow{display:grid;grid-template-columns:1fr;gap:7px;width:100%;margin-top:14px}
+  .backRow .btn{margin-top:0;justify-content:center;text-align:center}
 }
 
 @media(max-width:380px){
-  .wrap{padding-left:10px;padding-right:10px}
-  .hero h1{font-size:28px}
-  .question h2{font-size:22px}
-  .top{font-size:6px}
-  .btn{font-size:12.5px;padding:12px 10px}
-  .file{width:calc(100% - 4px);padding:21px 17px;min-height:300px}
-  .file h2{font-size:22px}
-  .judgment,.book,.profileDetailPaper,.profileDetailBook{padding-left:15px;padding-right:15px}
+  .wrap{padding-left:12px;padding-right:12px}
+  .hero h1{font-size:26px}
+  .intro{font-size:13px}
+  .question h2{font-size:20px}
+  .btn{font-size:12px;padding:11px;min-height:47px}
+  .file h2{font-size:18px}
+  .judgment h2{font-size:27px}
 }
 </style>
 </head>
